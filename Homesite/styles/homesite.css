@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  --primary-color: #3A3873;
+  --primary-light: #7B76F1;
+  --dark-purple: #312e81;
+  --light-purple: #a5b4fc;
+  --white: #ffffff;
+  --light-gray: #f3f4f6;
+  --dark-gray: #4b5563;
+
+  --Primary-Font: 'M PLUS 2', sans-serif;
+  --Secondary-Font: 'Instrument Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--Primary-Font);
+}
+
+h1, h2{
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 65px;
+}
+
+p{
+  font-size: 20px;
+  line-height: 25px;
+}
+
+p, a, li, span {
+  font-family: var(--Secondary-Font);
+}
+
+a{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--dark-gray);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--primary-color);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.logo svg {
+  margin-right: 8px;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Button Styles */
+.btn {
+  padding: 16px 16px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--Primary-Font);
+}
+
+.btn-primary {
+  background-color: var(--primary-light);
+  color: var(--white);
+  width: fit-content;
+}
+
+.btn-primary:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
+.btn-light {
+  background-color: var(--white);
+  color: var(--primary-color);
+  width: fit-content;
+}
+
+.arrow {
+  margin-left: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 60px 0;
+}
+
+.hero-content {
+  flex: 1;
+  gap: 20px;
+  display: flex;
+  padding-right: 40px;
+  flex-direction: column;
+}
+
+.hero p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Section */
+.content-section, .learning-paths, .academic-support {
+  padding: 80px 0;
+}
+
+.content-image, .learning-image, .support-image {
+  flex: 1;
+}
+
+.content-image img, .learning-image img, .support-image img, .tutor-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-text, .learning-text, .support-text {
+  flex: 1;
+  gap: 20px;
+  display: flex;
+  padding: 0 40px;
+  flex-direction: column;
+}
+
+/* AI Tutor Section */
+.ai-tutor {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 80px 0;
+}
+
+.tutor-content {
+  flex: 1;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 40px;
+}
+
+.tutor-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Learning Process Section */
+.learning-process {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+  background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-purple) 100%);
+}
+
+.learning-process .container {
+  flex-direction: column;
+}
+
+.process-content {
+  max-width: 700px;
+  margin: 0 auto;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.process-content button {
+  margin: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+  
+  .hero-content, .content-text, .learning-text, .tutor-content, .support-text {
+      padding: 0;
+      margin-bottom: 30px;
+      text-align: center;
+  }
+  
+  .hero-image, .content-image, .learning-image, .tutor-image, .support-image {
+      order: -1;
+      margin-bottom: 30px;
+  }
+  
+  .auth-buttons {
+      margin-top: 15px;
+  }
+  
+  header .container {
+      flex-direction: column;
+  }
+  
+  .content-section .container, .learning-paths .container, .academic-support .container, .ai-tutor .container {
+      gap: 30px;
+  }
+}
